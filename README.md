@@ -54,23 +54,23 @@ This project implements a simple ETL (Extract, Transform, Load) pipeline using P
 
 * Run the following command in the project directory:
 
-pip install -r requirements.txt
+  pip install -r requirements.txt
 
 
 
 * Database Setup
 
-Create the database and tables by running:
+  Create the database and tables by running:
 
-SOURCE schema.sql;
+  SOURCE schema.sql;
 
 
 
 * Run the ETL Pipeline
 
-Execute the ETL script using:
+  Execute the ETL script using:
 
-python etl.py
+  python etl.py
 
 
 
@@ -80,9 +80,9 @@ The script reads data, calls the OMDb API, handles errors, and loads valid recor
 
 * Run Analytical Queries
 
-After successful ETL execution, run:
+  After successful ETL execution, run:
 
-SOURCE queries.sql;
+  SOURCE queries.sql;
 
 
 
@@ -135,25 +135,25 @@ SOURCE queries.sql;
 
 * OMDb Movie Not Found Errors
 
-Handled using conditional checks and logging so the pipeline continues without failure.
+  Handled using conditional checks and logging so the pipeline continues without failure.
 
 
 
 * API Retry and Timeout Issues
 
-Requests are limited and failed calls are skipped to prevent infinite execution.
+  Requests are limited and failed calls are skipped to prevent infinite execution.
 
 
 
 * Foreign Key Constraint Errors
 
-Movies are inserted before ratings and validated before loading rating data.
+  Movies are inserted before ratings and validated before loading rating data.
 
 
 
 * NULL Values in Query Results
 
-SQL functions such as COALESCE are used to handle missing values.
+  SQL functions such as COALESCE are used to handle missing values.
 
 
 
@@ -168,4 +168,5 @@ SQL functions such as COALESCE are used to handle missing values.
 
 
 This project demonstrates a complete end-to-end ETL pipeline for movie data. It integrates external API data with CSV sources, handles real-world challenges like missing or inconsistent data, and stores cleaned data in a structured relational database. The solution allows for meaningful analysis through SQL queries and showcases practical data engineering skills, including data extraction, transformation, loading, and error handling. This pipeline can be extended or scaled for larger datasets and more complex analytics in a production environment.
+
 
